@@ -1,0 +1,171 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:medistock_new/constants/constant.dart';
+
+class NewDemandPage extends StatefulWidget {
+  static const id = 'new_demand_page';
+
+  @override
+  _NewDemandPageState createState() => _NewDemandPageState();
+}
+
+class _NewDemandPageState extends State<NewDemandPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('ABCH/20220101/0001'),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
+            child: Text(
+              'Order Details',
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline),
+            ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Agency Name:',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Date and Time of Indent: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Storage Location Id: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Item Description: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'SKU: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Batch Number: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Quantity: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'UOM: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Required By: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Remarks:',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Alpha Beta Charlie Hospital',
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('01/01/2022'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('ABC1'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Paracetamol'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('PC100ABC'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('200327'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('100'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('10 Caplet'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('03/01/2022'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('NIL'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 60,),
+          FloatingActionButton.extended(onPressed: () {}, icon: Icon(FontAwesomeIcons.qrcode), label: Text('Process Demand', style: kSmallerTextStyle,), )
+        ],
+      ),
+    );
+  }
+}
