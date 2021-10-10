@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medistock_new/demand_page/completed_demand_page.dart';
 import 'package:medistock_new/demand_page/demand_in_transit_page.dart';
 import 'package:medistock_new/demand_page/new_demand_list_page.dart';
@@ -19,7 +20,7 @@ class _SupplyMainPageState extends State<SupplyMainPage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     DemandPage(),
-    Text('2'),
+    HomePage(),
     StockPage(),
   ];
 
@@ -92,7 +93,7 @@ class _DemandPageState extends State<DemandPage> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(
-                                color: Color(0xFFFF6000), // Set border color
+                                color: Colors.blue, // Set border color
                                 width: 2.0), // Set border width
                             borderRadius: BorderRadius.all(Radius.circular(
                                 4.0)), // Set rounded corner radius
@@ -105,7 +106,7 @@ class _DemandPageState extends State<DemandPage> {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFFFF6000),
+                            primary: Colors.blue,
                             padding: EdgeInsets.all(20),
                           ),
                           onPressed: () {
@@ -135,7 +136,7 @@ class _DemandPageState extends State<DemandPage> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(
-                                color: Color(0xFFFF6000), // Set border color
+                                color: Colors.blue, // Set border color
                                 width: 2.0), // Set border width
                             borderRadius: BorderRadius.all(Radius.circular(
                                 4.0)), // Set rounded corner radius
@@ -148,11 +149,12 @@ class _DemandPageState extends State<DemandPage> {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFFFF6000),
+                            primary: Colors.blue,
                             padding: EdgeInsets.all(20),
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, DemandInTransitPage.id);
+                            Navigator.pushNamed(
+                                context, DemandInTransitPage.id);
                           },
                           child: Center(
                             child: Row(
@@ -178,7 +180,7 @@ class _DemandPageState extends State<DemandPage> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(
-                                color: Color(0xFFFF6000), // Set border color
+                                color: Colors.blue, // Set border color
                                 width: 2.0), // Set border width
                             borderRadius: BorderRadius.all(Radius.circular(
                                 4.0)), // Set rounded corner radius
@@ -191,11 +193,12 @@ class _DemandPageState extends State<DemandPage> {
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFFFF6000),
+                            primary: Colors.blue,
                             padding: EdgeInsets.all(20),
                           ),
                           onPressed: () {
-                            Navigator.pushNamed(context, CompletedDemandPage.id);
+                            Navigator.pushNamed(
+                                context, CompletedDemandPage.id);
                           },
                           child: Center(
                             child: Row(
@@ -288,6 +291,112 @@ class _StockPageState extends State<StockPage> {
           ),
         );
       },
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(30),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(
+                    color: Colors.grey, // Set border color
+                    width: 2.0), // Set border width
+                borderRadius: BorderRadius.all(
+                    Radius.circular(2.0)), // Set rounded corner radius
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(FontAwesomeIcons.solidPlusSquare, size: 30, color: Colors.red,),
+                      Text(
+                        "      New Request - Ref: ABCH/20220101/0001",
+                        textAlign: TextAlign.start,
+                        style:
+                            TextStyle(fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(30),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(
+                    color: Colors.grey, // Set border color
+                    width: 2.0), // Set border width
+                borderRadius: BorderRadius.all(
+                    Radius.circular(2.0)), // Set rounded corner radius
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(FontAwesomeIcons.truckPickup, size: 30, color: Colors.yellow,),
+                      Text(
+                        "      Item in Transit - Ref: ABCH/20220101/0001",
+                        textAlign: TextAlign.start,
+                        style:
+                            TextStyle(fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(30),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border.all(
+                    color: Colors.grey, // Set border color
+                    width: 2.0), // Set border width
+                borderRadius: BorderRadius.all(
+                    Radius.circular(2.0)), // Set rounded corner radius
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(FontAwesomeIcons.solidCheckSquare, size: 30, color: Colors.green,),
+                      Text(
+                        "      Completed - Ref: ABCH/20220101/0001",
+                        textAlign: TextAlign.start,
+                        style:
+                            TextStyle(fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

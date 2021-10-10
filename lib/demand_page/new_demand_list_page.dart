@@ -31,7 +31,7 @@ class _NewDemandListPageState extends State<NewDemandListPage> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(
-                      color: Color(0xFFFF6000), // Set border color
+                      color: Colors.blue, // Set border color
                       width: 2.0), // Set border width
                   borderRadius: BorderRadius.all(
                       Radius.circular(4.0)), // Set rounded corner radius
@@ -59,7 +59,7 @@ class _NewDemandListPageState extends State<NewDemandListPage> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                        color: Color(0xFFFF6000), // Set border color
+                        color: Colors.blue, // Set border color
                         width: 2.0), // Set border width
                     borderRadius: BorderRadius.all(
                         Radius.circular(4.0)), // Set rounded corner radius

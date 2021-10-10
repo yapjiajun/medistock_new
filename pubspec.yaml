@@ -23,6 +23,8 @@ environment:
 dependencies:
   material_floating_search_bar: ^0.3.4
   font_awesome_flutter: ^9.1.0
+  flutter_signature_pad: ^3.0.0
+  qr_code_scanner: ^0.5.2
   flutter:
     sdk: flutter
 

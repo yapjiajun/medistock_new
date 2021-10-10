@@ -24,7 +24,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     padding: const EdgeInsets.only(top: 300),
                     child: Text(
                       "MediStock",
-                      style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.blue),
                     ),
                   ),
                 ),
@@ -37,7 +37,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Color(0xFFFF6000),
+                            primary: Colors.blue,
                             padding: EdgeInsets.all(30),
                           ),
                           onPressed: () {

@@ -15,7 +15,7 @@ class _SignInPageMainState extends State<SignInPageMain> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFFF8F0E3),
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +28,7 @@ class _SignInPageMainState extends State<SignInPageMain> {
                   },
                   child: Icon(
                     Icons.arrow_back_ios_new,
-                    color: Color(0xFFFF6000),
+                    color: Colors.blue,
                     size: 30,
                   ),
                 ),
@@ -45,7 +45,7 @@ class _SignInPageMainState extends State<SignInPageMain> {
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xFFFF6000),
+                          primary: Colors.blue,
                           padding: EdgeInsets.all(30),
                         ),
                         onPressed: () {
@@ -67,7 +67,7 @@ class _SignInPageMainState extends State<SignInPageMain> {
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Color(0xFFFF6000),
+                          primary: Colors.blue,
                           padding: EdgeInsets.all(30),
                         ),
                         onPressed: () {

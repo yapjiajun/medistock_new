@@ -3,15 +3,17 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medistock_new/constants/constant.dart';
 import 'package:medistock_new/demand_page/qrcode_scanner.dart';
+import 'package:flutter_signature_pad/flutter_signature_pad.dart';
 
-class NewDemandPage extends StatefulWidget {
-  static const id = 'new_demand_page';
+class DemandInTransitDetailPage extends StatefulWidget {
+  static const id = 'demand_in_transit_detail_page';
 
   @override
-  _NewDemandPageState createState() => _NewDemandPageState();
+  _DemandInTransitDetailState createState() => _DemandInTransitDetailState();
 }
 
-class _NewDemandPageState extends State<NewDemandPage> {
+class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,13 +168,45 @@ class _NewDemandPageState extends State<NewDemandPage> {
           SizedBox(
             height: 60,
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: Text(
+                'Signature',
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline),
+              ),
+            ),
+          ),
+          Column(
+            children: [
+              Container(
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.blueAccent)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Signature(
+                    color: Colors.black, // Color of the drawing path
+                    strokeWidth: 5.0, // with
+                    backgroundPainter:
+                        null, // Additional custom painter to draw stuff like watermark
+                    onSign: null, // Callback called on user pan drawing
+                    key:
+                        null, // key that allow you to provide a GlobalKey that'll let you retrieve the image once user has signed
+                  ),
+                ),
+              ),
+            ],
+          ),
           FloatingActionButton.extended(
             onPressed: () {
               Navigator.pushNamed(context, QrCodeScanner.id);
             },
-            icon: Icon(FontAwesomeIcons.qrcode),
+            icon: Icon(FontAwesomeIcons.shuttleVan),
             label: Text(
-              'Process Demand',
+              '  Delivery Confirmation',
               style: kSmallerTextStyle,
             ),
           )

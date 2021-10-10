@@ -3,15 +3,16 @@ import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medistock_new/constants/constant.dart';
 import 'package:medistock_new/demand_page/qrcode_scanner.dart';
+import 'package:flutter_signature_pad/flutter_signature_pad.dart';
 
-class NewDemandPage extends StatefulWidget {
-  static const id = 'new_demand_page';
+class CompletedDemandDetailPage extends StatefulWidget {
+  static const id = 'demand_completed_detail_page';
 
   @override
-  _NewDemandPageState createState() => _NewDemandPageState();
+  _CompletedDemandDetailState createState() => _CompletedDemandDetailState();
 }
 
-class _NewDemandPageState extends State<NewDemandPage> {
+class _CompletedDemandDetailState extends State<CompletedDemandDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,16 +167,6 @@ class _NewDemandPageState extends State<NewDemandPage> {
           SizedBox(
             height: 60,
           ),
-          FloatingActionButton.extended(
-            onPressed: () {
-              Navigator.pushNamed(context, QrCodeScanner.id);
-            },
-            icon: Icon(FontAwesomeIcons.qrcode),
-            label: Text(
-              'Process Demand',
-              style: kSmallerTextStyle,
-            ),
-          )
         ],
       ),
     );

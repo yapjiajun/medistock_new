@@ -13,7 +13,7 @@ class _SignInPageSupplyState extends State<SignInPageSupply> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFFF8F0E3),
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -27,7 +27,7 @@ class _SignInPageSupplyState extends State<SignInPageSupply> {
                     },
                     child: Icon(
                       Icons.arrow_back_ios_new,
-                      color: Color(0xFFFF6000),
+                      color: Colors.blue,
                       size: 30,
                     ),
                   ),
@@ -66,15 +66,15 @@ class _SignInPageSupplyState extends State<SignInPageSupply> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(40, 20, 40, 10),
                         child: TextField(
-                          cursorColor: Color(0xFFFF6000),
+                          cursorColor: Colors.blue,
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
-                              borderSide: BorderSide(color: Colors.orange),
+                              borderSide: BorderSide(color: Colors.blue),
                             ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.orange),
+                              borderSide: BorderSide(color: Colors.blue),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(10),
                               ),
@@ -87,17 +87,17 @@ class _SignInPageSupplyState extends State<SignInPageSupply> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(40, 10, 40, 20),
                         child: TextField(
-                          cursorColor: Color(0xFFFF6000),
+                          cursorColor: Colors.blue,
                           obscureText: true,
                           decoration: InputDecoration(
-                            suffixStyle: TextStyle(color: Color(0xFFFF6000)),
+                            suffixStyle: TextStyle(color: Colors.blue),
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),
-                              borderSide: BorderSide(color: Colors.orange),
+                              borderSide: BorderSide(color: Colors.blue),
                             ),
                             enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.orange),
+                                borderSide: BorderSide(color: Colors.blue),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10))),
                             labelText: 'Password',
@@ -109,7 +109,7 @@ class _SignInPageSupplyState extends State<SignInPageSupply> {
                         padding: const EdgeInsets.fromLTRB(40, 30, 40, 20),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              primary: Color(0xFFFF6000),
+                              primary: Colors.blue,
                               padding: EdgeInsets.all(18)),
                           onPressed: () {
                             Navigator.pushNamed(context, SupplyMainPage.id);
