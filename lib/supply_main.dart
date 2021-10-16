@@ -3,8 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:medistock_new/demand_page/completed_demand_page.dart';
 import 'package:medistock_new/demand_page/demand_in_transit_page.dart';
 import 'package:medistock_new/demand_page/new_demand_list_page.dart';
+import 'package:medistock_new/full_report_page.dart';
 import 'constants/constant.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
+import 'full_report_page.dart';
 
 class SupplyMainPage extends StatefulWidget {
   static const id = 'supply_main_page';
@@ -239,6 +241,119 @@ class _StockPageState extends State<StockPage> {
         fit: StackFit.expand,
         children: [
           buildFloatingSearchBar(),
+          Padding(
+            padding: const EdgeInsets.only(top: 80),
+            child: ListView(
+              children: [
+                Center(
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Stock List',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue,
+                            decoration: TextDecoration.underline),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Divider(
+                          thickness: 1,
+                        ),
+                        Text('Type: Paracetamol'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Batch: 200327'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('SKU: PC100ABC'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Quantity: 100'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('UoM: EA'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('S-ID: ABC1'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Location: C2R3B5'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('UoM: EA'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Expiry: Oct 2025'),
+                      ],
+                    )),
+                Container(
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.topLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Divider(
+                          thickness: 1,
+                        ),
+                        Text('Type: Ibuprofen'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Batch: 100345'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('SKU: PC200EFG'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Quantity: 500'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('UoM: EA'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('S-ID: ABC1'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Location: C2R4B5'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('UoM: EA'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Expiry: Feb 2026'),
+                        SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    )),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -307,95 +422,173 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.all(30),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                    color: Colors.grey, // Set border color
-                    width: 2.0), // Set border width
-                borderRadius: BorderRadius.all(
-                    Radius.circular(2.0)), // Set rounded corner radius
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              child: Center(
+                child: Text(
+                  'Notification',
+                  style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                      decoration: TextDecoration.underline),
+                ),
               ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(30),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(
+                  color: Colors.grey, // Set border color
+                  width: 2.0), // Set border width
+              borderRadius: BorderRadius.all(
+                  Radius.circular(2.0)), // Set rounded corner radius
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.solidPlusSquare,
+                      size: 30,
+                      color: Colors.red,
+                    ),
+                    Text(
+                      "    New Request - Ref: ABCH/20220101/0001",
+                      textAlign: TextAlign.start,
+                      style: TextStyle(fontSize: 13),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(30),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(
+                  color: Colors.grey, // Set border color
+                  width: 2.0), // Set border width
+              borderRadius: BorderRadius.all(
+                  Radius.circular(2.0)), // Set rounded corner radius
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.truckPickup,
+                      size: 30,
+                      color: Colors.yellow,
+                    ),
+                    Text(
+                      "     Item in Transit - Ref: ABCH/20220101/0001",
+                      textAlign: TextAlign.start,
+                      style: TextStyle(fontSize: 13),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(30),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(
+                  color: Colors.grey, // Set border color
+                  width: 2.0), // Set border width
+              borderRadius: BorderRadius.all(
+                  Radius.circular(2.0)), // Set rounded corner radius
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.solidCheckSquare,
+                      size: 30,
+                      color: Colors.green,
+                    ),
+                    Text(
+                      "     Completed - Ref: ABCH/20220101/0001",
+                      textAlign: TextAlign.start,
+                      style: TextStyle(fontSize: 13),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+            child: Container(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      Icon(FontAwesomeIcons.solidPlusSquare, size: 30, color: Colors.red,),
-                      Text(
-                        "      New Request - Ref: ABCH/20220101/0001",
-                        textAlign: TextAlign.start,
-                        style:
-                            TextStyle(fontSize: 13),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      child: Center(
+                        child: Text(
+                          'Data Report',
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                              decoration: TextDecoration.underline),
+                        ),
                       ),
-                    ],
+                    ),
+                  ),
+                  Image(
+                    image: AssetImage(
+                      'assets/datat1.jpg',
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.blue,
+                        padding: EdgeInsets.all(15),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, FullDataReportPage.id);
+                      },
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('View Full Report',
+                                style: kElevatedButtonTextStyle),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            FaIcon(
+                              FontAwesomeIcons.database,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(30),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                    color: Colors.grey, // Set border color
-                    width: 2.0), // Set border width
-                borderRadius: BorderRadius.all(
-                    Radius.circular(2.0)), // Set rounded corner radius
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(FontAwesomeIcons.truckPickup, size: 30, color: Colors.yellow,),
-                      Text(
-                        "      Item in Transit - Ref: ABCH/20220101/0001",
-                        textAlign: TextAlign.start,
-                        style:
-                            TextStyle(fontSize: 13),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(30),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border.all(
-                    color: Colors.grey, // Set border color
-                    width: 2.0), // Set border width
-                borderRadius: BorderRadius.all(
-                    Radius.circular(2.0)), // Set rounded corner radius
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(FontAwesomeIcons.solidCheckSquare, size: 30, color: Colors.green,),
-                      Text(
-                        "      Completed - Ref: ABCH/20220101/0001",
-                        textAlign: TextAlign.start,
-                        style:
-                            TextStyle(fontSize: 13),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

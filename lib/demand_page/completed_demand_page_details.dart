@@ -54,7 +54,14 @@ class _CompletedDemandDetailState extends State<CompletedDemandDetailPage> {
                       height: 10,
                     ),
                     Text(
-                      'Storage Location Id: ',
+                      'From S-ID: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'To S-ID: ',
                       style: kSmallerTextStyle,
                     ),
                     SizedBox(
@@ -92,6 +99,13 @@ class _CompletedDemandDetailState extends State<CompletedDemandDetailPage> {
                       'UOM: ',
                       style: kSmallerTextStyle,
                     ),
+                     SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Expiry: ',
+                      style: kSmallerTextStyle,
+                    ),
                     SizedBox(
                       height: 10,
                     ),
@@ -127,6 +141,10 @@ class _CompletedDemandDetailState extends State<CompletedDemandDetailPage> {
                     SizedBox(
                       height: 10,
                     ),
+                    Text('WH01'),
+                     SizedBox(
+                      height: 10,
+                    ),
                     Text('ABC1'),
                     SizedBox(
                       height: 10,
@@ -147,7 +165,11 @@ class _CompletedDemandDetailState extends State<CompletedDemandDetailPage> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text('10 Caplet'),
+                    Text('Ea'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Oct/2025'),
                     SizedBox(
                       height: 10,
                     ),

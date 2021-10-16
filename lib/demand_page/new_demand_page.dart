@@ -53,7 +53,14 @@ class _NewDemandPageState extends State<NewDemandPage> {
                       height: 10,
                     ),
                     Text(
-                      'Storage Location Id: ',
+                      'From S-ID: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'From S-ID: ',
                       style: kSmallerTextStyle,
                     ),
                     SizedBox(
@@ -95,6 +102,13 @@ class _NewDemandPageState extends State<NewDemandPage> {
                       height: 10,
                     ),
                     Text(
+                      'Expiry: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
                       'Required By: ',
                       style: kSmallerTextStyle,
                     ),
@@ -126,6 +140,10 @@ class _NewDemandPageState extends State<NewDemandPage> {
                     SizedBox(
                       height: 10,
                     ),
+                    Text('WH01'),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Text('ABC1'),
                     SizedBox(
                       height: 10,
@@ -146,7 +164,11 @@ class _NewDemandPageState extends State<NewDemandPage> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text('10 Caplet'),
+                    Text('Ea'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text('Oct 2025'),
                     SizedBox(
                       height: 10,
                     ),

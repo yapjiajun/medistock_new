@@ -13,7 +13,6 @@ class DemandInTransitDetailPage extends StatefulWidget {
 }
 
 class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +20,7 @@ class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
         backgroundColor: Colors.blue,
         title: Text('ABCH/20220101/0001'),
       ),
-      body: Column(
+      body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 15, 0, 30),
@@ -55,7 +54,14 @@ class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
                       height: 10,
                     ),
                     Text(
-                      'Storage Location Id: ',
+                      'From S-ID: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'To S-ID: ',
                       style: kSmallerTextStyle,
                     ),
                     SizedBox(
@@ -97,6 +103,13 @@ class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
                       height: 10,
                     ),
                     Text(
+                      'Expiry: ',
+                      style: kSmallerTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
                       'Required By: ',
                       style: kSmallerTextStyle,
                     ),
@@ -128,6 +141,10 @@ class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
                     SizedBox(
                       height: 10,
                     ),
+                    Text('WH01'),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Text('ABC1'),
                     SizedBox(
                       height: 10,
@@ -148,7 +165,13 @@ class _DemandInTransitDetailState extends State<DemandInTransitDetailPage> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text('10 Caplet'),
+                    Text('EA'),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      'Oct/2025 ',
+                    ),
                     SizedBox(
                       height: 10,
                     ),
