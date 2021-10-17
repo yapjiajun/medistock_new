@@ -3,20 +3,20 @@ import 'package:medistock_new/constants/constant.dart';
 import 'qrcode_scanner.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class TransferPage extends StatefulWidget {
-  const TransferPage({Key? key}) : super(key: key);
-  static const id = 'transfer_stock_page';
+class NewOrderPage extends StatefulWidget {
+  const NewOrderPage({Key? key}) : super(key: key);
+  static const id = 'new_order_page';
   @override
-  _TransferPageState createState() => _TransferPageState();
+  _NewOrderPageState createState() => _NewOrderPageState();
 }
 
-class _TransferPageState extends State<TransferPage> {
+class _NewOrderPageState extends State<NewOrderPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text('Transfer Stock'),
+          title: Text('New Order Demand'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -28,7 +28,7 @@ class _TransferPageState extends State<TransferPage> {
                   child: Container(
                     child: Center(
                       child: Text(
-                        'Order List',
+                        'New Order List',
                         style: kUnderLineTextStyle,
                       ),
                     ),
@@ -45,6 +45,32 @@ class _TransferPageState extends State<TransferPage> {
                 decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'E.g. XXXH/YYYMMDD/0001'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Text('Description'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(), hintText: 'Parcetamol'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Text('Quantity'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                decoration: const InputDecoration(
+                    border: OutlineInputBorder(), hintText: 'E.g. 10'),
               ),
               SizedBox(
                 height: 10,
@@ -85,45 +111,6 @@ class _TransferPageState extends State<TransferPage> {
               TextField(
                 decoration: const InputDecoration(
                     border: OutlineInputBorder(), hintText: 'E.g. ABC1'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: Text('Description'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              TextField(
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), hintText: 'E.g. Paracetamol'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: Text('Batch Number'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              TextField(
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), hintText: 'E.g. 200327'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: Text('Quantity'),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              TextField(
-                decoration: const InputDecoration(
-                    border: OutlineInputBorder(), hintText: 'E.g. 10'),
               ),
               SizedBox(
                 height: 10,

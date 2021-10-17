@@ -3,6 +3,7 @@ import 'package:medistock_new/demand_page/completed_demand_page.dart';
 import 'package:medistock_new/demand_page/demand_in_transit_details_page.dart';
 import 'package:medistock_new/demand_page/demand_in_transit_page.dart';
 import 'package:medistock_new/demand_page/new_demand_page.dart';
+import 'package:medistock_new/demand_page/new_order.dart';
 import 'package:medistock_new/demand_page/qrcode_scanner.dart';
 import 'package:medistock_new/demand_page/shopping_cart.dart';
 import 'package:medistock_new/demand_page/transfer.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         FullDataReportPage.id:(context) => FullDataReportPage(),
         TransferPage.id:(context)=>TransferPage(),
         OrderListPage.id:(context)=>OrderListPage(),
+        NewOrderPage.id:(context)=>NewOrderPage(),
       },
     );
   }
